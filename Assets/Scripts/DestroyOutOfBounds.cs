@@ -29,7 +29,8 @@ public class DestroyOutOfBounds : MonoBehaviour
     {
         if (transform.position.z > topBound)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else if (transform.position.z < lowerBound)
         {

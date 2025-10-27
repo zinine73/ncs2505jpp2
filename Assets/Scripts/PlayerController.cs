@@ -35,9 +35,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Launch a projectile from the player
-            Instantiate(projectilePrefab,
-                transform.position + ADJUST_UP,
-                projectilePrefab.transform.rotation);
+            // Instantiate(projectilePrefab,
+            //     transform.position + ADJUST_UP,
+            //     projectilePrefab.transform.rotation);
+            GameObject pooledObject = ObjectPooler.Instance.GetPooledObject();
+            if (pooledObject != null)
+            {
+                pooledObject.SetActive(true);
+                pooledObject.transform.position = transform.position + ADJUST_UP;
+            }
         }
     }
 }

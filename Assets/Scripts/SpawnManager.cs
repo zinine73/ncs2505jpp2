@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] animalPrefabs;
+    public Transform parentsTranform;
     [SerializeField] GameObject gameOverPanel;
 
     float spawnRangeX = 20.0f;
@@ -41,7 +42,8 @@ public class SpawnManager : MonoBehaviour
             spawnPosZ);
         Instantiate(animalPrefabs[animalIndex],
             spawnPos,
-            animalPrefabs[animalIndex].transform.rotation);
+            animalPrefabs[animalIndex].transform.rotation,
+            parentsTranform);
     }
 
     public void DisplayGameOver()

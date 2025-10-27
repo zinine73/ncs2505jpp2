@@ -415,6 +415,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8abdffe1b94911c4cbca2f0037b2664c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 509365249118171179, guid: 50980d5c00aab994595b2c97807f8201, type: 3}
+  amountToPool: 10
 --- !u!4 &372957735
 Transform:
   m_ObjectHideFlags: 0
@@ -806,6 +809,7 @@ MonoBehaviour:
   - {fileID: 7608859984299560714, guid: 9a8477d0f550b9b488b6f614643cc9e9, type: 3}
   - {fileID: 331592110983986843, guid: d68e005494806ae4890bee5fa86a62d7, type: 3}
   - {fileID: 8913112021016856504, guid: 3619d9cbe27091d4ca64623944e2684a, type: 3}
+  parentsTranform: {fileID: 1313872882}
   gameOverPanel: {fileID: 815642574}
 --- !u!4 &1313872882
 Transform:
